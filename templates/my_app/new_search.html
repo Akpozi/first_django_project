@@ -1,14 +1,6 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    {% csrf_token %}
-    <form action="{% url 'new_search' %}" method="post">
-        <input type="text" name="search" placeholder="search">
-        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-            <i class="material-icons right">send</i>
-        </button>
-    </form>
-
     <h6 style="text-align: center">{{ search | title }}</h6>
 
     {% for post in final_postings %}
